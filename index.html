@@ -1,0 +1,1206 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ea580c">
+<meta name="description" content="Quincaillerie Awa - Adjamé. Outillage, peinture, plomberie, électricité et bricolage à Abidjan. Commandez sur WhatsApp.">
+<title>Quincaillerie Awa - Adjamé | Tout pour bricoler</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+--orange:#ea580c;
+--orange-dark:#c2410c;
+--yellow:#fbbf24;
+--dark:#1f2937;
+--light:#f8fafc;
+--white:#ffffff;
+--text:#273244;
+--muted:#64748b;
+--border:#e5e7eb;
+--green:#16a34a;
+--shadow:0 8px 25px rgba(0,0,0,.08);
+}
+body.dark{
+--light:#111827;
+--white:#1f2937;
+--text:#f3f4f6;
+--muted:#cbd5e1;
+--border:#374151;
+--dark:#f9fafb;
+--shadow:0 8px 25px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.7;
+transition:.25s;
+padding-bottom:0;
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--dark);color:white;padding:8px 0;font-size:12px}
+.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{
+position:sticky;top:0;z-index:100;
+background:var(--white);box-shadow:var(--shadow);
+}
+.header-inner{
+display:flex;align-items:center;justify-content:space-between;
+gap:15px;padding:13px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;color:var(--orange)}
+.logo-icon{
+width:43px;height:43px;background:var(--orange);color:white;
+border-radius:12px;display:grid;place-items:center;font-size:21px;
+}
+.logo small{display:block;font-size:10px;color:var(--muted);font-weight:600}
+nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+nav button,.header-actions button{
+border:0;background:transparent;color:var(--text);
+padding:9px 10px;border-radius:9px;font-size:12px;font-weight:600;
+}
+nav button:hover,nav button.active{background:#fff0e7;color:var(--orange)}
+.header-actions{display:flex;align-items:center;gap:5px}
+.icon-btn{position:relative}
+.cart-count{
+position:absolute;top:0;right:0;background:var(--orange);
+color:white;font-size:10px;border-radius:20px;padding:1px 5px;
+}
+.mobile-nav{display:none}
+.btn{
+border:0;border-radius:10px;padding:12px 17px;
+font-weight:700;display:inline-flex;align-items:center;
+justify-content:center;gap:8px;transition:.2s;font-size:13px;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--orange);color:white}
+.btn-primary:hover{background:var(--orange-dark)}
+.btn-dark{background:var(--dark);color:white}
+.btn-yellow{background:var(--yellow);color:#292524}
+.btn-green{background:#16a34a;color:white}
+.btn-outline{border:1px solid var(--orange);color:var(--orange);background:transparent}
+.btn-small{padding:8px 11px;font-size:11px}
+.hero{
+background:linear-gradient(110deg,rgba(17,24,39,.96),rgba(17,24,39,.78)),
+url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1500&q=85') center/cover;
+color:white;padding:85px 0;
+}
+.hero-content{max-width:750px}
+.eyebrow{color:var(--yellow);font-weight:700;font-size:13px;margin-bottom:15px}
+.hero h1{font-size:clamp(32px,5vw,57px);line-height:1.18;font-weight:900;margin-bottom:20px}
+.hero p{color:#e5e7eb;max-width:600px;margin-bottom:25px}
+.hero-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.hero-note{margin-top:25px;color:#fde68a;font-size:12px}
+.section{padding:65px 0}
+.section-sm{padding:38px 0}
+.section-title{text-align:center;margin-bottom:32px}
+.section-title span{color:var(--orange);font-weight:700;font-size:12px;text-transform:uppercase}
+.section-title h2{font-size:clamp(24px,4vw,34px);font-weight:900;margin-top:5px}
+.section-title p{color:var(--muted);font-size:13px;margin-top:8px}
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.benefit,.category-card,.product-card,.review-card,.guide-card,.info-card{
+background:var(--white);border:1px solid var(--border);
+border-radius:16px;overflow:hidden;box-shadow:var(--shadow);
+}
+.benefit{padding:23px;text-align:center}
+.benefit i{font-size:28px;color:var(--orange);margin-bottom:10px}
+.benefit h3{font-size:15px}
+.benefit p{font-size:12px;color:var(--muted);margin-top:5px}
+.category-card{padding:23px;text-align:center;cursor:pointer;transition:.2s}
+.category-card:hover,.product-card:hover{transform:translateY(-5px)}
+.category-card i{font-size:30px;color:var(--orange);margin-bottom:10px}
+.category-card h3{font-size:13px}
+.product-card{transition:.2s;position:relative}
+.product-image{height:185px;background:#f1f5f9;position:relative;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:cover}
+.discount{
+position:absolute;top:10px;left:10px;background:var(--orange);
+color:white;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;
+}
+.product-body{padding:15px}
+.product-body h3{font-size:14px;line-height:1.5;min-height:42px}
+.product-brand{font-size:11px;color:var(--muted);margin:5px 0}
+.price{color:var(--orange);font-size:19px;font-weight:900}
+.old-price{font-size:11px;color:var(--muted);text-decoration:line-through;margin-left:5px}
+.stock{font-size:11px;color:var(--green);font-weight:700;margin:7px 0}
+.product-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.product-actions button{flex:1;min-width:75px}
+.badge{
+display:inline-block;background:#dcfce7;color:#166534;
+padding:4px 8px;border-radius:20px;font-size:10px;font-weight:700;
+}
+.page{display:none;min-height:65vh;animation:fadeIn .35s}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.page-banner{background:var(--dark);color:white;padding:45px 0}
+.page-banner h1{font-size:32px;font-weight:900}
+.page-banner p{color:#d1d5db;font-size:13px;margin-top:5px}
+.breadcrumb{font-size:11px;color:var(--muted);margin:18px 0}
+.toolbar{
+display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+margin-bottom:25px;
+}
+.field{
+width:100%;padding:12px;border:1px solid var(--border);
+border-radius:9px;background:var(--white);color:var(--text);
+outline:none;font-size:13px;
+}
+.field:focus{border-color:var(--orange)}
+.search-box{flex:2;min-width:220px;position:relative}
+.search-box i{position:absolute;left:13px;top:14px;color:var(--muted)}
+.search-box input{padding-left:39px}
+.toolbar select{flex:1;min-width:160px}
+.filter-buttons{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.filter-btn{
+padding:8px 12px;border-radius:30px;border:1px solid var(--border);
+background:var(--white);color:var(--text);font-size:11px;
+}
+.filter-btn.active{background:var(--orange);color:white;border-color:var(--orange)}
+.empty{text-align:center;padding:40px;color:var(--muted)}
+.detail-layout{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.detail-image{height:400px;background:#eee;border-radius:16px;overflow:hidden}
+.detail-image img{width:100%;height:100%;object-fit:cover}
+.detail-info h1{font-size:28px;line-height:1.3}
+.detail-info p{font-size:13px;color:var(--muted);margin:13px 0}
+.detail-info li{font-size:13px;margin:7px 0;list-style:none}
+.detail-info li i{color:var(--green);margin-right:8px}
+.detail-price{font-size:28px;color:var(--orange);font-weight:900}
+.form-card{background:var(--white);border:1px solid var(--border);padding:25px;border-radius:16px;box-shadow:var(--shadow)}
+.form-group{margin-bottom:15px}
+.form-group label{font-size:12px;font-weight:700;display:block;margin-bottom:6px}
+.form-group textarea{min-height:110px;resize:vertical}
+.form-group input,.form-group select,.form-group textarea{width:100%}
+.cart-row{
+display:flex;align-items:center;gap:14px;padding:15px 0;
+border-bottom:1px solid var(--border);
+}
+.cart-row img{width:75px;height:75px;object-fit:cover;border-radius:9px}
+.cart-row-info{flex:1}
+.cart-row-info h3{font-size:13px}
+.cart-row-info p{font-size:12px;color:var(--orange);font-weight:700}
+.qty{display:flex;align-items:center;gap:9px}
+.qty button{
+width:29px;height:29px;border:1px solid var(--border);
+border-radius:7px;background:var(--light);color:var(--text);
+}
+.summary{background:var(--white);padding:20px;border-radius:14px;border:1px solid var(--border)}
+.summary-line{display:flex;justify-content:space-between;font-size:13px;padding:7px 0}
+.summary-total{font-weight:900;font-size:20px;color:var(--orange);border-top:1px solid var(--border);margin-top:10px;padding-top:14px}
+.guide-card{padding:20px}
+.guide-card h3{font-size:16px;margin:8px 0}
+.guide-card p,.guide-card li{font-size:12px;color:var(--muted)}
+.guide-card ol{padding-left:20px;margin:12px 0}
+.guide-icon{font-size:30px;color:var(--orange)}
+.review-stars{color:#f59e0b;margin:7px 0}
+.review-card{padding:20px}
+.review-card p{font-size:12px;color:var(--muted)}
+.review-card h3{font-size:14px}
+.info-card{padding:22px}
+.info-card i{font-size:25px;color:var(--orange);margin-bottom:12px}
+.info-card h3{font-size:15px}
+.info-card p{font-size:12px;color:var(--muted);margin-top:7px}
+.notice{background:#fff7ed;color:#9a3412;border-left:4px solid var(--orange);padding:14px;border-radius:8px;font-size:12px;margin:15px 0}
+body.dark .notice{background:#431407;color:#fed7aa}
+footer{background:#111827;color:white;padding:48px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:25px}
+footer h3{font-size:14px;margin-bottom:14px;color:var(--yellow)}
+footer p,footer a{font-size:11px;color:#cbd5e1;display:block;margin:7px 0}
+footer a:hover{color:var(--yellow)}
+.footer-bottom{border-top:1px solid #374151;margin-top:30px;padding-top:18px;text-align:center;font-size:11px;color:#9ca3af}
+.floating-wa{
+position:fixed;right:18px;bottom:22px;width:55px;height:55px;
+border-radius:50%;background:#16a34a;color:white;display:grid;
+place-items:center;font-size:27px;z-index:200;box-shadow:0 5px 20px #0003;
+}
+.toast{
+position:fixed;bottom:90px;left:50%;transform:translateX(-50%);
+background:#166534;color:white;padding:11px 20px;border-radius:9px;
+font-size:12px;z-index:500;opacity:0;pointer-events:none;transition:.3s;
+}
+.toast.show{opacity:1}
+.gallery-grid img{height:210px;width:100%;object-fit:cover;border-radius:12px}
+.gallery-grid div{background:var(--white);padding:8px;border-radius:12px;border:1px solid var(--border)}
+.gallery-grid p{font-size:11px;padding:7px}
+@media(max-width:1000px){
+nav{display:none}
+.grid-4{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+body{padding-bottom:65px}
+.topbar{font-size:10px}
+.header-inner{padding:9px 0}
+.logo{font-size:15px}
+.logo-icon{width:37px;height:37px}
+.header-actions button{padding:7px}
+.mobile-nav{
+position:fixed;bottom:0;left:0;width:100%;height:65px;
+display:flex;justify-content:space-around;align-items:center;
+background:var(--white);border-top:1px solid var(--border);z-index:150;
+}
+.mobile-nav button{
+background:transparent;border:0;color:var(--muted);
+display:flex;flex-direction:column;align-items:center;gap:3px;
+font-size:9px;padding:5px;
+}
+.mobile-nav button i{font-size:18px}
+.mobile-nav button.active{color:var(--orange)}
+.hero{padding:65px 0}
+.hero h1{font-size:34px}
+.section{padding:45px 0}
+.grid-3{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.grid-2{grid-template-columns:1fr}
+.grid-4{gap:10px}
+.product-image{height:140px}
+.product-body{padding:10px}
+.product-body h3{font-size:12px;min-height:38px}
+.product-actions{gap:4px}
+.product-actions button{font-size:9px;padding:7px 5px}
+.price{font-size:16px}
+.detail-layout{grid-template-columns:1fr}
+.detail-image{height:280px}
+.footer-grid{grid-template-columns:1fr 1fr}
+.page-banner h1{font-size:25px}
+.cart-row{gap:8px}
+.cart-row img{width:58px;height:58px}
+.qty{gap:4px}
+}
+@media(max-width:370px){
+.grid-3{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="container">
+<span><i class="fa-solid fa-location-dot"></i> Adjamé, Grand Marché, Abidjan</span>
+<span><i class="fa-solid fa-phone"></i> 55 06 16 53 | Lun-Sam 08h-19h</span>
+</div>
+</div>
+
+<header>
+<div class="container header-inner">
+<a href="#" class="logo" onclick="go('accueil');return false">
+<span class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+<span>QUINCAILLERIE AWA<small>ADJAMÉ • ABIDJAN</small></span>
+</a>
+<nav id="desktop-nav">
+<button onclick="go('accueil')">Accueil</button>
+<button onclick="go('catalogue')">Catalogue</button>
+<button onclick="go('outillage')">Outillage</button>
+<button onclick="go('peinture')">Peinture</button>
+<button onclick="go('plomberie')">Plomberie</button>
+<button onclick="go('guides')">Guides</button>
+<button onclick="go('contact')">Contact</button>
+</nav>
+<div class="header-actions">
+<button class="icon-btn" onclick="toggleTheme()" aria-label="Changer le thème"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+<button class="icon-btn" onclick="go('panier')" aria-label="Panier">
+<i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cartCount">0</span>
+</button>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- 1 ACCUEIL -->
+<section id="accueil" class="page active">
+<div class="hero">
+<div class="container hero-content">
+<div class="eyebrow"><i class="fa-solid fa-star"></i> VOTRE QUINCAILLERIE À ADJAMÉ</div>
+<h1>Tout Pour Bricoler à Adjamé - Qualité, Prix Marché, Conseil Gratuit</h1>
+<p>Outillage, peinture, plomberie, électricité et accessoires. Trouvez ce qu'il vous faut pour vos travaux avec les conseils de Quincaillerie Awa.</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" onclick="go('catalogue')"><i class="fa-solid fa-store"></i> Voir les Produits</button>
+<button class="btn btn-green" onclick="wa('Bonjour, je souhaite commander chez Quincaillerie Awa - Adjamé.')"><i class="fa-brands fa-whatsapp"></i> Commander WhatsApp</button>
+<button class="btn btn-yellow" onclick="go('devis')">Demander un Devis</button>
+</div>
+<div class="hero-note"><i class="fa-solid fa-truck"></i> Livraison dans tout Abidjan • Conseil gratuit</div>
+</div>
+</div>
+
+<div class="section-sm">
+<div class="container grid grid-4">
+<div class="benefit"><i class="fa-solid fa-medal"></i><h3>Produits de qualité</h3><p>Des produits sélectionnés pour vos travaux.</p></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><h3>Garantie</h3><p>Garantie 1 an sur les produits concernés.</p></div>
+<div class="benefit"><i class="fa-solid fa-tags"></i><h3>Prix Marché</h3><p>Des prix clairement affichés en FCFA.</p></div>
+<div class="benefit"><i class="fa-solid fa-comments"></i><h3>Conseil Gratuit</h3><p>On vous aide à préparer votre liste.</p></div>
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+<div class="section-title"><span>Notre sélection</span><h2>Produits vedettes</h2><p>Découvrez quelques produits disponibles dans notre catalogue.</p></div>
+<div class="grid grid-3" id="featuredProducts"></div>
+<div style="text-align:center;margin-top:25px"><button class="btn btn-primary" onclick="go('catalogue')">Voir les 12 produits <i class="fa-solid fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<div class="section" style="background:var(--white)">
+<div class="container">
+<div class="section-title"><span>Nos rayons</span><h2>Nos 6 catégories</h2></div>
+<div class="grid grid-3">
+<div class="category-card" onclick="go('outillage')"><i class="fa-solid fa-hammer"></i><h3>Outillage</h3></div>
+<div class="category-card" onclick="go('peinture')"><i class="fa-solid fa-paint-roller"></i><h3>Peinture & Décoration</h3></div>
+<div class="category-card" onclick="go('plomberie')"><i class="fa-solid fa-faucet"></i><h3>Plomberie & Salle de Bain</h3></div>
+<div class="category-card" onclick="go('plomberie')"><i class="fa-solid fa-lightbulb"></i><h3>Électricité & Éclairage</h3></div>
+<div class="category-card" onclick="go('catalogue')"><i class="fa-solid fa-screwdriver"></i><h3>Visserie & Fixation</h3></div>
+<div class="category-card" onclick="go('catalogue')"><i class="fa-solid fa-leaf"></i><h3>Jardin & Extérieur</h3></div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="container grid grid-2">
+<div>
+<span style="color:var(--orange);font-weight:700;font-size:12px">POURQUOI NOUS CHOISIR ?</span>
+<h2 style="font-size:28px;font-weight:900;margin:10px 0">Pourquoi acheter chez Awa ?</h2>
+<p style="font-size:13px;color:var(--muted)">Notre objectif est de faciliter vos travaux. Vous pouvez venir avec votre liste, demander conseil ou nous expliquer votre projet.</p>
+<ul style="font-size:13px;margin:18px 0 18px 20px">
+<li>On coupe le bois.</li>
+<li>On vous conseille gratuitement.</li>
+<li>On prépare votre liste de bricolage.</li>
+<li>Livraison dans plusieurs quartiers d'Abidjan.</li>
+</ul>
+<button class="btn btn-primary" onclick="go('devis')">Préparer ma liste</button>
+</div>
+<div class="grid grid-2">
+<div class="info-card"><i class="fa-solid fa-tree"></i><h3>Découpe du bois</h3><p>On coupe le bois selon votre besoin.</p></div>
+<div class="info-card"><i class="fa-solid fa-list-check"></i><h3>Liste bricolage</h3><p>On vous aide à organiser vos achats.</p></div>
+<div class="info-card"><i class="fa-solid fa-truck-fast"></i><h3>Livraison</h3><p>Dans plusieurs zones d'Abidjan.</p></div>
+<div class="info-card"><i class="fa-solid fa-headset"></i><h3>Conseil</h3><p>Expliquez-nous votre projet.</p></div>
+</div>
+</div>
+</div>
+
+<div class="section" style="background:var(--white)">
+<div class="container">
+<div class="section-title"><span>Votre satisfaction</span><h2>Exemples d'avis clients</h2><p>Textes de démonstration à remplacer par de vrais avis clients.</p></div>
+<div class="grid grid-3">
+<div class="review-card"><h3>Client d'Adjamé</h3><div class="review-stars">★★★★★</div><p>Exemple de témoignage : accueil et conseils appréciés.</p></div>
+<div class="review-card"><h3>Client de Cocody</h3><div class="review-stars">★★★★★</div><p>Exemple de témoignage : commande préparée selon la liste.</p></div>
+<div class="review-card"><h3>Client de Yopougon</h3><div class="review-stars">★★★★★</div><p>Exemple de témoignage : informations claires sur les produits.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 2 CATALOGUE -->
+<section id="catalogue" class="page">
+<div class="page-banner"><div class="container"><h1>Catalogue complet</h1><p>Retrouvez nos 12 produits et choisissez ce qu'il vous faut.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="toolbar">
+<div class="search-box"><i class="fa-solid fa-search"></i><input id="searchInput" class="field" placeholder="Rechercher nom, marque, utilisation..." oninput="renderCatalog()"></div>
+<select id="brandFilter" class="field" onchange="renderCatalog()"><option value="">Toutes les marques</option></select>
+</div>
+<div class="filter-buttons" id="categoryFilters">
+<button class="filter-btn active" onclick="setCategory('Tous',this)">Tous</button>
+<button class="filter-btn" onclick="setCategory('Outillage',this)">Outillage</button>
+<button class="filter-btn" onclick="setCategory('Peinture & Décoration',this)">Peinture</button>
+<button class="filter-btn" onclick="setCategory('Plomberie & Salle de Bain',this)">Plomberie</button>
+<button class="filter-btn" onclick="setCategory('Électricité & Éclairage',this)">Électricité</button>
+<button class="filter-btn" onclick="setCategory('Visserie & Fixation',this)">Visserie</button>
+<button class="filter-btn" onclick="setCategory('Jardin & Extérieur',this)">Jardin</button>
+</div>
+<p id="catalogCount" style="font-size:12px;color:var(--muted);margin-bottom:15px"></p>
+<div class="grid grid-4" id="catalogProducts"></div>
+</div>
+</div>
+</section>
+
+<!-- 3 OUTILLAGE -->
+<section id="outillage" class="page">
+<div class="page-banner"><div class="container"><h1>Outillage</h1><p>Les outils pour vos travaux à la maison et sur chantier.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="notice"><strong>Quel outil pour quel travail ?</strong><br>La perceuse permet de percer et visser selon le foret adapté. Le marteau sert à frapper et enfoncer des clous. Les clés servent à serrer et desserrer les écrous.</div>
+<div class="grid grid-3" id="toolProducts"></div>
+</div>
+</div>
+</section>
+
+<!-- 4 PEINTURE -->
+<section id="peinture" class="page">
+<div class="page-banner"><div class="container"><h1>Peinture & Décoration</h1><p>Préparez vos murs et choisissez vos couleurs.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="grid grid-2">
+<div class="info-card">
+<h3>Combien de litres pour ta chambre ?</h3>
+<p>Estimation simple selon la règle demandée : 1 litre = 8 m². La quantité réelle dépend du support, du nombre de couches et du rendement indiqué sur le pot.</p>
+<div class="form-group" style="margin-top:15px"><label>Surface à peindre en m²</label><input id="paintArea" type="number" min="0" class="field" placeholder="Ex : 32"></div>
+<button class="btn btn-primary" onclick="calculatePaint()">Calculer</button>
+<p id="paintResult" style="font-weight:700;margin-top:12px"></p>
+</div>
+<div class="info-card">
+<h3>Comment choisir une couleur ?</h3>
+<p>Le blanc apporte de la luminosité. Le bleu peut créer une ambiance calme. Le vert donne une sensation de fraîcheur. Le jaune apporte une touche chaleureuse.</p>
+<p>Teste toujours la couleur sur une petite partie du mur avant de peindre toute la pièce.</p>
+</div>
+</div>
+<div style="margin-top:30px" class="grid grid-3" id="paintProducts"></div>
+</div>
+</div>
+</section>
+
+<!-- 5 PLOMBERIE ELECTRICITE -->
+<section id="plomberie" class="page">
+<div class="page-banner"><div class="container"><h1>Plomberie & Électricité</h1><p>Les accessoires pour vos installations et réparations.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="notice"><strong>Fuite d'eau ? Panne ? On te conseille.</strong><br>Décrivez votre problème à notre équipe. Pour les interventions électriques, coupez l'alimentation avant toute manipulation et faites appel à un professionnel qualifié si nécessaire.</div>
+<div class="grid grid-4" id="plumbingProducts"></div>
+</div>
+</div>
+</section>
+
+<!-- 6 DETAIL -->
+<section id="detail" class="page">
+<div class="section">
+<div class="container">
+<div class="breadcrumb"><a onclick="go('catalogue')">Catalogue</a> / Détail du produit</div>
+<div id="detailContent"></div>
+</div>
+</div>
+</section>
+
+<!-- 7 PANIER -->
+<section id="panier" class="page">
+<div class="page-banner"><div class="container"><h1>Panier / Commande</h1><p>Vérifiez vos articles avant de commander.</p></div></div>
+<div class="section">
+<div class="container grid grid-2">
+<div class="info-card">
+<h2 style="font-size:19px;margin-bottom:15px">Votre panier</h2>
+<div id="cartItems"></div>
+</div>
+<div>
+<div class="form-card">
+<h2 style="font-size:19px;margin-bottom:15px">Livraison et commande</h2>
+<div class="form-group">
+<label>Zone de livraison</label>
+<select class="field" id="deliveryZone" onchange="updateCart()">
+<option value="500">Adjamé — 500 FCFA</option>
+<option value="1000">Plateau / Cocody — 1 000 FCFA</option>
+<option value="1500">Yopougon / Abobo — 1 500 FCFA</option>
+<option value="0">Retrait au magasin — Gratuit</option>
+</select>
+</div>
+<div class="form-group"><label>Adresse exacte</label><input id="deliveryAddress" class="field" placeholder="Quartier, rue, repère..."></div>
+<div class="form-group"><label>C'est pour quel travail ?</label><textarea id="workDescription" class="field" placeholder="Ex : peindre ma chambre, réparer ma salle de bain..."></textarea></div>
+<div class="summary">
+<div class="summary-line"><span>Sous-total</span><strong id="subtotal">0 FCFA</strong></div>
+<div class="summary-line"><span>Livraison</span><strong id="deliveryCost">0 FCFA</strong></div>
+<p style="font-size:10px;color:var(--muted)">Livraison gratuite à partir de 50 000 FCFA.</p>
+<div class="summary-line summary-total"><span>Total</span><strong id="grandTotal">0 FCFA</strong></div>
+</div>
+<button class="btn btn-green" style="width:100%;margin-top:18px" onclick="checkout()"><i class="fa-brands fa-whatsapp"></i> Commander Tout sur WhatsApp</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 8 DEVIS -->
+<section id="devis" class="page">
+<div class="page-banner"><div class="container"><h1>Demander un devis / Ma liste de bricolage</h1><p>Expliquez-nous votre projet, nous vous aiderons à préparer votre liste.</p></div></div>
+<div class="section">
+<div class="container grid grid-2">
+<div>
+<h2 style="font-size:25px;font-weight:900">Votre projet commence ici.</h2>
+<p style="color:var(--muted);font-size:13px;margin:12px 0">Décrivez ce que vous voulez réaliser. Notre équipe pourra vous répondre avec une liste de produits et les prix correspondants.</p>
+<div class="info-card" style="margin-top:20px">
+<i class="fa-solid fa-clipboard-list"></i>
+<h3>Comment ça marche ?</h3>
+<p>1. Vous expliquez votre projet.</p>
+<p>2. Vous indiquez les produits souhaités.</p>
+<p>3. Vous transmettez votre budget.</p>
+<p>4. Nous échangeons avec vous sur WhatsApp.</p>
+</div>
+</div>
+<div class="form-card">
+<h2 style="font-size:19px;margin-bottom:17px">Ma liste de bricolage</h2>
+<form onsubmit="sendQuote(event)">
+<div class="form-group"><label>Ton nom *</label><input class="field" id="quoteName" required placeholder="Votre nom"></div>
+<div class="form-group"><label>Ton projet *</label><textarea class="field" id="quoteProject" required placeholder="Ex : Je veux peindre ma chambre 3m x 4m, installer une douche..."></textarea></div>
+<div class="form-group"><label>Ta liste *</label><textarea class="field" id="quoteList" required placeholder="Ex : 1 pot peinture blanche, 2 pinceaux..."></textarea></div>
+<div class="form-group"><label>Budget (FCFA)</label><input class="field" id="quoteBudget" type="number" min="0" placeholder="Votre budget"></div>
+<button class="btn btn-green" style="width:100%"><i class="fa-brands fa-whatsapp"></i> Envoyer ma demande de devis</button>
+</form>
+<p style="font-size:10px;color:var(--muted);margin-top:12px">Le devis définitif sera confirmé après échange avec le magasin.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 9 GUIDES -->
+<section id="guides" class="page">
+<div class="page-banner"><div class="container"><h1>Guides bricolage</h1><p>Quelques conseils simples pour préparer vos travaux.</p></div></div>
+<div class="section">
+<div class="container grid grid-2">
+<div class="guide-card">
+<i class="fa-solid fa-paint-roller guide-icon"></i>
+<h3>Comment peindre une chambre en 5 étapes</h3>
+<p>Outils nécessaires : peinture, rouleau, pinceau, bac, ruban de masquage, bâche et papier abrasif.</p>
+<ol><li>Protéger le sol et les meubles.</li><li>Nettoyer et préparer les murs.</li><li>Protéger les contours avec du ruban.</li><li>Appliquer la peinture en couches régulières.</li><li>Laisser sécher selon les indications du fabricant.</li></ol>
+<button class="btn btn-primary btn-small" onclick="guideOrder('Peinture, rouleau, pinceau, bac, ruban de masquage et bâche')">Commander les outils pour ce guide</button>
+</div>
+<div class="guide-card">
+<i class="fa-solid fa-faucet guide-icon"></i>
+<h3>Comment réparer une fuite en 3 étapes</h3>
+<p>Outils nécessaires : clé adaptée, joints de rechange et matériel de plomberie approprié.</p>
+<ol><li>Fermer l'arrivée d'eau.</li><li>Identifier l'origine de la fuite et vérifier le joint.</li><li>Remplacer la pièce défectueuse et vérifier l'étanchéité.</li></ol>
+<button class="btn btn-primary btn-small" onclick="guideOrder('Matériel de plomberie, joints et clé adaptée')">Commander les outils pour ce guide</button>
+</div>
+<div class="guide-card">
+<i class="fa-solid fa-lightbulb guide-icon"></i>
+<h3>Comment installer une ampoule / prise</h3>
+<p>Outils nécessaires : ampoule adaptée, tournevis isolé et matériel électrique conforme.</p>
+<ol><li>Couper le courant au disjoncteur.</li><li>Vérifier l'absence de tension avant intervention.</li><li>Installer le matériel adapté et vérifier le fonctionnement.</li></ol>
+<p>Pour une prise ou un câblage, faites appel à un électricien qualifié.</p>
+<button class="btn btn-primary btn-small" onclick="guideOrder('Ampoule LED 12W et matériel électrique adapté')">Commander les outils pour ce guide</button>
+</div>
+<div class="guide-card">
+<i class="fa-solid fa-screwdriver guide-icon"></i>
+<h3>Comment fixer une étagère sans se tromper</h3>
+<p>Outils nécessaires : perceuse, niveau, vis et chevilles adaptées au mur.</p>
+<ol><li>Choisir l'emplacement et vérifier les réseaux cachés.</li><li>Marquer les points de fixation au niveau.</li><li>Percer avec un foret adapté, poser les chevilles et fixer l'étagère.</li></ol>
+<button class="btn btn-primary btn-small" onclick="guideOrder('Perceuse, vis et chevilles adaptées au mur')">Commander les outils pour ce guide</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 10 GALERIE -->
+<section id="galerie" class="page">
+<div class="page-banner"><div class="container"><h1>Galerie / Magasin</h1><p>Découvrez les produits et quelques images illustratives de nos rayons.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="notice">Ces images sont des illustrations de produits et de bricolage, pas des photographies vérifiées du magasin. Remplacez-les par vos propres photos pour présenter fidèlement votre boutique.</div>
+<div class="grid grid-3 gallery-grid">
+<div><img src="images/quinca-1-perceuse.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80'" alt="Outillage"><p>Rayon outillage</p></div>
+<div><img src="images/quinca-3-peinture-blanche.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80'" alt="Peinture"><p>Rayon peinture</p></div>
+<div><img src="images/quinca-5-robinet.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80'" alt="Plomberie"><p>Rayon plomberie</p></div>
+<div><img src="images/quinca-7-ampoules.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80'" alt="Éclairage"><p>Électricité et éclairage</p></div>
+<div><img src="images/quinca-11-brouette.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80'" alt="Jardin"><p>Jardin et extérieur</p></div>
+<div><img src="images/quinca-9-vis.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581147036324-c1c89c2c8b5c?w=800&q=80'" alt="Fixation"><p>Visserie et fixation</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 11 AVIS -->
+<section id="avis" class="page">
+<div class="page-banner"><div class="container"><h1>Avis clients</h1><p>Votre expérience compte pour nous.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="notice">Les six textes ci-dessous sont des exemples de présentation, pas des avis clients authentifiés. Remplacez-les par des témoignages réels avec l'accord des clients.</div>
+<div class="grid grid-3">
+<div class="review-card"><h3>Client 1</h3><p>Quartier : Adjamé</p><div class="review-stars">★★★★★</div><p>Exemple de texte : les conseils reçus m'ont aidé à préparer mes achats.</p></div>
+<div class="review-card"><h3>Client 2</h3><p>Quartier : Cocody</p><div class="review-stars">★★★★★</div><p>Exemple de texte : j'ai pu demander les informations sur les produits par WhatsApp.</p></div>
+<div class="review-card"><h3>Client 3</h3><p>Quartier : Plateau</p><div class="review-stars">★★★★★</div><p>Exemple de texte : la liste de bricolage a été préparée facilement.</p></div>
+<div class="review-card"><h3>Client 4</h3><p>Quartier : Yopougon</p><div class="review-stars">★★★★★</div><p>Exemple de texte : les prix sont présentés clairement.</p></div>
+<div class="review-card"><h3>Client 5</h3><p>Quartier : Abobo</p><div class="review-stars">★★★★★</div><p>Exemple de texte : j'ai pu poser mes questions avant de commander.</p></div>
+<div class="review-card"><h3>Client 6</h3><p>Quartier : Adjamé</p><div class="review-stars">★★★★★</div><p>Exemple de texte : une solution pratique pour préparer mes travaux.</p></div>
+</div>
+<div class="form-card" style="max-width:600px;margin:30px auto">
+<h2 style="font-size:19px;margin-bottom:15px">Laisse ton avis</h2>
+<form onsubmit="sendReview(event)">
+<div class="form-group"><label>Ton nom</label><input class="field" id="reviewName" required></div>
+<div class="form-group"><label>Ton quartier</label><input class="field" id="reviewArea" required></div>
+<div class="form-group"><label>Ta note</label><select id="reviewRating" class="field"><option>5 étoiles</option><option>4 étoiles</option><option>3 étoiles</option><option>2 étoiles</option><option>1 étoile</option></select></div>
+<div class="form-group"><label>Ton commentaire</label><textarea class="field" id="reviewText" required></textarea></div>
+<button class="btn btn-green" style="width:100%">Envoyer mon avis sur WhatsApp</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 12 CONTACT -->
+<section id="contact" class="page">
+<div class="page-banner"><div class="container"><h1>Contact et localisation</h1><p>Nous sommes à Adjamé, à côté du Grand Marché.</p></div></div>
+<div class="section">
+<div class="container grid grid-2">
+<div class="grid">
+<div class="info-card"><i class="fa-solid fa-location-dot"></i><h3>Adresse exacte</h3><p>Adjamé, à côté du Grand Marché d'Adjamé, en face de la gare, Abidjan, Côte d'Ivoire.</p></div>
+<div class="info-card"><i class="fa-brands fa-whatsapp"></i><h3>WhatsApp / Téléphone</h3><p>55 06 16 53</p><button class="btn btn-green btn-small" onclick="wa('Bonjour Quincaillerie Awa, je souhaite avoir des renseignements.')">Écrire sur WhatsApp</button></div>
+<div class="info-card"><i class="fa-solid fa-clock"></i><h3>Horaires</h3><p>Lundi - Samedi : 08h00 - 19h00</p><p>Dimanche : 09h00 - 14h00</p></div>
+<div class="info-card"><i class="fa-solid fa-truck"></i><h3>Zones de livraison</h3><p>Adjamé, Plateau, Cocody, Yopougon, Abobo et tout Abidjan.</p></div>
+</div>
+<div class="form-card">
+<h2 style="font-size:20px;margin-bottom:15px">Comment nous trouver ?</h2>
+<p style="font-size:13px;color:var(--muted)">Rendez-vous à Adjamé, à côté du Grand Marché d'Adjamé, en face de la gare.</p>
+<a class="btn btn-outline" style="margin:15px 0" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Grand+March%C3%A9+Adjam%C3%A9+Abidjan+C%C3%B4te+d%27Ivoire"><i class="fa-solid fa-map-location-dot"></i> Voir sur Google Maps</a>
+<hr style="border:0;border-top:1px solid var(--border);margin:15px 0">
+<h3 style="font-size:16px;margin-bottom:12px">Message rapide</h3>
+<form onsubmit="sendContact(event)">
+<div class="form-group"><label>Ton nom</label><input class="field" id="contactName" required></div>
+<div class="form-group"><label>Ton message</label><textarea class="field" id="contactMessage" required></textarea></div>
+<button class="btn btn-green" style="width:100%">Envoyer sur WhatsApp</button>
+</form>
+<a class="btn btn-outline" style="width:100%;margin-top:10px" href="tel:+22555061653"><i class="fa-solid fa-phone"></i> Appeler +225 55 06 16 53</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 13 CGV -->
+<section id="cgv" class="page">
+<div class="page-banner"><div class="container"><h1>Conditions Générales de Vente</h1><p>Informations relatives aux commandes chez Quincaillerie Awa.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="info-card">
+<h3>1. Objet</h3>
+<p>Les présentes conditions encadrent les demandes de renseignements, les commandes et les achats auprès de Quincaillerie Awa - Adjamé.</p>
+<h3 style="margin-top:20px">2. Commandes</h3>
+<p>Les commandes transmises par WhatsApp sont des demandes à confirmer. Le magasin vérifie la disponibilité, les quantités, les frais de livraison et le montant final avant validation.</p>
+<h3 style="margin-top:20px">3. Prix</h3>
+<p>Les prix du catalogue sont indiqués en FCFA. Les prix affichés peuvent être confirmés par le magasin avant la validation de la commande. Aucun frais non annoncé ne doit être ajouté sans accord du client.</p>
+<h3 style="margin-top:20px">4. Paiement</h3>
+<p>Modes de paiement annoncés : espèces, Orange Money, Wave et MTN MoMo. Les modalités de règlement sont confirmées avec le magasin.</p>
+<h3 style="margin-top:20px">5. Livraison</h3>
+<p>Zones annoncées : Adjamé, Plateau, Cocody, Yopougon, Abobo et tout Abidjan. Le délai indicatif annoncé est de 1h à 3h, sous réserve de disponibilité, de la zone et des conditions de circulation. Il doit être confirmé lors de la commande.</p>
+<p>La livraison est gratuite à partir de 50 000 FCFA selon les conditions affichées au panier.</p>
+<h3 style="margin-top:20px">6. Garantie</h3>
+<p>Les produits explicitement annoncés avec une garantie bénéficient des conditions indiquées sur leur fiche. Une garantie d'un an est annoncée pour l'outillage électrique concerné. Les modalités précises sont confirmées au moment de l'achat.</p>
+<h3 style="margin-top:20px">7. Retour et produit défectueux</h3>
+<p>En cas de produit défectueux, contactez le magasin dans les 48 heures suivant la réception ou l'achat, avec une description du problème et les informations d'achat. Les modalités de vérification et de solution seront convenues avec le magasin, conformément aux règles applicables.</p>
+<h3 style="margin-top:20px">8. Annulation</h3>
+<p>Pour demander l'annulation, contactez le magasin rapidement sur WhatsApp. Une commande déjà préparée ou expédiée peut nécessiter une confirmation particulière.</p>
+<h3 style="margin-top:20px">9. Contact</h3>
+<p>Quincaillerie Awa - Adjamé, à côté du Grand Marché d'Adjamé, en face de la gare, Abidjan. WhatsApp : 55 06 16 53.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 14 CONFIDENTIALITE -->
+<section id="confidentialite" class="page">
+<div class="page-banner"><div class="container"><h1>Politique de confidentialité</h1><p>Comment les informations envoyées au magasin sont utilisées.</p></div></div>
+<div class="section">
+<div class="container">
+<div class="info-card">
+<h3>1. Informations collectées</h3>
+<p>Les formulaires du site peuvent contenir votre nom, votre numéro ou compte WhatsApp, votre adresse de livraison, votre projet, votre liste de produits, votre budget et votre message.</p>
+<h3 style="margin-top:20px">2. Pourquoi ces informations ?</h3>
+<p>Elles servent à répondre à vos demandes, préparer vos devis, traiter vos commandes, organiser une livraison et assurer le suivi de votre demande.</p>
+<h3 style="margin-top:20px">3. Partage des informations</h3>
+<p>Les informations ne sont pas destinées à être vendues. Elles ne sont pas partagées avec des tiers à des fins commerciales. WhatsApp et les services utilisés pour communiquer restent soumis à leurs propres politiques de confidentialité.</p>
+<h3 style="margin-top:20px">4. Durée de conservation</h3>
+<p>La durée de conservation annoncée est d'un an, sauf obligation légale ou nécessité justifiée de conservation plus longue ou plus courte.</p>
+<h3 style="margin-top:20px">5. Demande de suppression</h3>
+<p>Pour demander la suppression de vos informations, envoyez le message « Supprime mes infos » sur WhatsApp au 55 06 16 53. Certaines données peuvent devoir être conservées lorsqu'une obligation légale l'impose.</p>
+<h3 style="margin-top:20px">6. Cookies et stockage local</h3>
+<p>Ce site utilise localStorage dans votre navigateur pour sauvegarder votre panier et votre préférence de thème. Ces données restent dans votre navigateur et ne sont pas automatiquement envoyées au magasin par le site.</p>
+<h3 style="margin-top:20px">7. Vos droits</h3>
+<p>Vous pouvez demander des informations sur les données communiquées, demander leur rectification ou leur suppression et poser vos questions au magasin par WhatsApp.</p>
+<h3 style="margin-top:20px">8. Contact</h3>
+<p>Quincaillerie Awa - Adjamé, Abidjan, Côte d'Ivoire. WhatsApp : 55 06 16 53.</p>
+<div class="notice">Cette politique est un texte de présentation à faire vérifier et adapter aux obligations légales applicables en Côte d'Ivoire avant publication.</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo" style="color:white;margin-bottom:15px">
+<span class="logo-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+<span>QUINCAILLERIE AWA<small style="color:#cbd5e1">ADJAMÉ • ABIDJAN</small></span>
+</div>
+<p>Tout pour vos travaux de bricolage, construction, peinture et réparation.</p>
+<p><i class="fa-solid fa-location-dot"></i> Adjamé, à côté du Grand Marché, en face de la gare, Abidjan.</p>
+<p><i class="fa-brands fa-whatsapp"></i> 55 06 16 53</p>
+</div>
+<div>
+<h3>Navigation</h3>
+<a onclick="go('accueil')">Accueil</a>
+<a onclick="go('catalogue')">Catalogue</a>
+<a onclick="go('outillage')">Outillage</a>
+<a onclick="go('peinture')">Peinture</a>
+<a onclick="go('plomberie')">Plomberie & Électricité</a>
+<a onclick="go('panier')">Mon panier</a>
+</div>
+<div>
+<h3>Services</h3>
+<a onclick="go('devis')">Demander un devis</a>
+<a onclick="go('guides')">Guides bricolage</a>
+<a onclick="go('galerie')">Galerie / Magasin</a>
+<a onclick="go('avis')">Avis clients</a>
+<a onclick="go('contact')">Contact</a>
+</div>
+<div>
+<h3>Informations</h3>
+<a onclick="go('cgv')">Conditions de vente</a>
+<a onclick="go('confidentialite')">Confidentialité</a>
+<p>Paiement : Espèces, Orange Money, Wave, MTN MoMo.</p>
+<p>Horaires : Lun-Sam 08h-19h, Dim 09h-14h.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Quincaillerie Awa - Adjamé. Tous droits réservés.</div>
+</div>
+</footer>
+
+<div class="mobile-nav">
+<button onclick="go('accueil')" data-nav="accueil"><i class="fa-solid fa-house"></i>Accueil</button>
+<button onclick="go('catalogue')" data-nav="catalogue"><i class="fa-solid fa-store"></i>Produits</button>
+<button onclick="go('devis')" data-nav="devis"><i class="fa-solid fa-file-invoice"></i>Devis</button>
+<button onclick="go('panier')" data-nav="panier"><i class="fa-solid fa-cart-shopping"></i>Panier</button>
+<button onclick="go('contact')" data-nav="contact"><i class="fa-solid fa-phone"></i>Contact</button>
+</div>
+
+<a class="floating-wa" href="https://wa.me/22555061653?text=Bonjour%20Quincaillerie%20Awa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="toast" id="toast">Ajouté au panier !</div>
+
+<script>
+"use strict";
+
+/* CONFIGURATION */
+const PHONE = "22555061653";
+const CURRENCY = "FCFA";
+
+const products = [
+{
+id:1,name:"Perceuse Visseuse 20V + 2 Batteries",
+category:"Outillage",price:45000,old:55000,
+brand:"Bosch",stock:"En stock",warranty:"Garantie 1 an",
+description:"Une perceuse visseuse sans fil avec deux batteries pour vos travaux de perçage et de vissage.",
+use:"Pour percer le bois et les matériaux compatibles et visser des éléments.",
+image:"images/quinca-1-perceuse.jpg",
+fallback:"https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80"
+},
+{
+id:2,name:"Marteau + Tournevis + Clés - Kit 24 Pièces",
+category:"Outillage",price:15000,old:19000,
+brand:"Awa Pro",stock:"En stock",warranty:"Non précisée",
+description:"Un kit de 24 pièces pour effectuer différents petits travaux de réparation et de montage.",
+use:"Pour frapper, serrer, desserrer et réaliser de petits travaux à la maison.",
+image:"images/quinca-2-kit-outils.jpg",
+fallback:"https://images.unsplash.com/photo-1581147036324-c1c89c2c8b5c?w=800&q=80"
+},
+{
+id:3,name:"Peinture Blanche 15L - Pot",
+category:"Peinture & Décoration",price:28000,old:35000,
+brand:"Seigneurie",stock:"En stock",warranty:"Non précisée",
+description:"Un pot de peinture blanche de 15 litres pour rafraîchir les surfaces intérieures adaptées.",
+use:"Pour peindre une chambre, un salon ou d'autres murs compatibles. Couvre 120m2 selon les indications fournies.",
+image:"images/quinca-3-peinture-blanche.jpg",
+fallback:"https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80"
+},
+{
+id:4,name:"Peinture Couleur 5L - Bleu / Vert / Jaune au choix",
+category:"Peinture & Décoration",price:12000,old:15000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Un pot de peinture couleur de 5 litres disponible en bleu, vert ou jaune au choix.",
+use:"Pour décorer une chambre, un salon ou apporter une touche de couleur à un mur.",
+image:"images/quinca-4-peinture-couleur.jpg",
+fallback:"https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80"
+},
+{
+id:5,name:"Robinet Mélangeur Cuisine",
+category:"Plomberie & Salle de Bain",price:18000,old:22000,
+brand:"Non précisée",stock:"En stock",warranty:"Garantie 1 an",
+description:"Un robinet mélangeur pour équiper votre évier de cuisine.",
+use:"Pour installer un point d'eau avec mélange de l'eau chaude et froide selon l'installation.",
+image:"images/quinca-5-robinet.jpg",
+fallback:"https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80"
+},
+{
+id:6,name:"Tuyau PVC + Raccords - Kit Plomberie",
+category:"Plomberie & Salle de Bain",price:10000,old:13000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Un kit de tuyau PVC et de raccords pour réaliser des assemblages de plomberie adaptés.",
+use:"Pour les installations et réparations de conduites compatibles.",
+image:"images/quinca-6-tuyau-pvc.jpg",
+fallback:"https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80"
+},
+{
+id:7,name:"Ampoule LED 12W - Lot de 5",
+category:"Électricité & Éclairage",price:7500,old:10000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Un lot de cinq ampoules LED de 12W conçu pour l'éclairage domestique avec économie d'énergie.",
+use:"Pour éclairer les pièces de la maison avec des ampoules compatibles.",
+image:"images/quinca-7-ampoules.jpg",
+fallback:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80"
+},
+{
+id:8,name:"Rallonge Multiprise 4 Prises - 5m",
+category:"Électricité & Éclairage",price:8000,old:11000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Une rallonge multiprise de 5 mètres avec quatre prises pour brancher plusieurs appareils compatibles.",
+use:"Pour alimenter plusieurs appareils dans une pièce en respectant la puissance maximale autorisée.",
+image:"images/quinca-8-rallonge.jpg",
+fallback:"https://images.unsplash.com/photo-1558008258-3256797b43f3?w=800&q=80"
+},
+{
+id:9,name:"Vis + Chevilles - Boîte 200 Pièces",
+category:"Visserie & Fixation",price:5000,old:7000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Une boîte de 200 pièces de vis et chevilles de différentes tailles.",
+use:"Pour fixer des éléments selon le type de vis, de cheville et de support.",
+image:"images/quinca-9-vis.jpg",
+fallback:"https://images.unsplash.com/photo-1581147036324-c1c89c2c8b5c?w=800&q=80"
+},
+{
+id:10,name:"Serrure de Porte + 3 Clés",
+category:"Visserie & Fixation",price:12000,old:15000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Une serrure de porte accompagnée de trois clés pour équiper une porte compatible.",
+use:"Pour sécuriser une porte après vérification des dimensions et du type de serrure.",
+image:"images/quinca-10-serrure.jpg",
+fallback:"https://images.unsplash.com/photo-1507149833265-60c372daea22?w=800&q=80"
+},
+{
+id:11,name:"Brouette 100L - Robuste",
+category:"Jardin & Extérieur",price:35000,old:42000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Une brouette robuste de 100 litres pour transporter du matériel et des charges adaptées.",
+use:"Pour transporter du sable, des outils, de la terre et des matériaux sur chantier ou au jardin.",
+image:"images/quinca-11-brouette.jpg",
+fallback:"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+},
+{
+id:12,name:"Tuyau d'Arrosage 20m + Pistolet",
+category:"Jardin & Extérieur",price:15000,old:18000,
+brand:"Non précisée",stock:"En stock",warranty:"Non précisée",
+description:"Un tuyau d'arrosage de 20 mètres accompagné d'un pistolet pour arroser vos espaces extérieurs.",
+use:"Pour arroser le jardin, les plantes et nettoyer les espaces extérieurs.",
+image:"images/quinca-12-tuyau-arrosage.jpg",
+fallback:"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+}
+];
+
+/* OUTILS */
+const money = n => Number(n).toLocaleString("fr-FR") + " " + CURRENCY;
+const reduction = p => Math.round((p.old-p.price)/p.old*100);
+const getProduct = id => products.find(p=>p.id===Number(id));
+
+function wa(message){
+const url="https://wa.me/"+PHONE+"?text="+encodeURIComponent(message);
+window.open(url,"_blank","noopener");
+}
+
+function escapeHTML(value){
+return String(value).replace(/[&<>"']/g,c=>({
+"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+}[c]));
+}
+
+function notify(message="Ajouté au panier !"){
+const toast=document.getElementById("toast");
+toast.textContent=message;
+toast.classList.add("show");
+setTimeout(()=>toast.classList.remove("show"),2200);
+}
+
+/* NAVIGATION SANS RECHARGEMENT */
+function go(id){
+const target=document.getElementById(id);
+if(!target)return;
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+target.classList.add("active");
+document.querySelectorAll("[data-nav]").forEach(b=>{
+b.classList.toggle("active",b.dataset.nav===id);
+});
+window.scrollTo({top:0,behavior:"smooth"});
+if(id==="panier")updateCart();
+if(id==="catalogue")renderCatalog();
+}
+
+/* PRODUITS */
+function productCard(p){
+return `
+<article class="product-card">
+<div class="product-image">
+<img src="${p.image}" alt="${escapeHTML(p.name)}" loading="lazy"
+onerror="this.onerror=null;this.src='${p.fallback}'">
+<span class="discount">-${reduction(p)}%</span>
+</div>
+<div class="product-body">
+<h3>${escapeHTML(p.name)}</h3>
+<div class="product-brand">${escapeHTML(p.brand)}</div>
+<div class="price">${money(p.price)}<span class="old-price">${money(p.old)}</span></div>
+<div class="stock"><i class="fa-solid fa-circle-check"></i> ${p.stock}</div>
+<div class="product-actions">
+<button class="btn btn-primary btn-small" onclick="addCart(${p.id})"><i class="fa-solid fa-plus"></i> Ajouter</button>
+<button class="btn btn-green btn-small" onclick="orderProduct(${p.id})"><i class="fa-brands fa-whatsapp"></i></button>
+<button class="btn btn-outline btn-small" onclick="showDetail(${p.id})">Détail</button>
+</div>
+</div>
+</article>`;
+}
+
+function renderCatalog(){
+const search=(document.getElementById("searchInput")?.value||"").toLowerCase().trim();
+const brand=document.getElementById("brandFilter")?.value||"";
+let list=products.filter(p=>{
+const text=[p.name,p.brand,p.use,p.description,p.category].join(" ").toLowerCase();
+return text.includes(search)&&(!brand||p.brand===brand)&&
+(selectedCategory==="Tous"||p.category===selectedCategory);
+});
+document.getElementById("catalogCount").textContent=list.length+" produit(s) trouvé(s)";
+document.getElementById("catalogProducts").innerHTML=list.length?
+list.map(productCard).join(""):'<div class="empty" style="grid-column:1/-1">Aucun produit trouvé. Essayez une autre recherche.</div>';
+}
+
+let selectedCategory="Tous";
+function setCategory(category,button){
+selectedCategory=category;
+document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+renderCatalog();
+}
+
+function renderCategory(containerId,category){
+document.getElementById(containerId).innerHTML=products.filter(p=>p.category===category).map(productCard).join("");
+}
+
+function showDetail(id){
+const p=getProduct(id);
+if(!p)return;
+document.getElementById("detailContent").innerHTML=`
+<div class="detail-layout">
+<div class="detail-image">
+<img src="${p.image}" alt="${escapeHTML(p.name)}"
+onerror="this.onerror=null;this.src='${p.fallback}'">
+</div>
+<div class="detail-info">
+<span class="badge">${escapeHTML(p.stock)}</span>
+<h1>${escapeHTML(p.name)}</h1>
+<p>${escapeHTML(p.description)}</p>
+<ul>
+<li><i class="fa-solid fa-check"></i> Catégorie : ${escapeHTML(p.category)}</li>
+<li><i class="fa-solid fa-check"></i> Marque : ${escapeHTML(p.brand)}</li>
+<li><i class="fa-solid fa-check"></i> Utilisation : ${escapeHTML(p.use)}</li>
+<li><i class="fa-solid fa-check"></i> Garantie : ${escapeHTML(p.warranty)}</li>
+<li><i class="fa-solid fa-check"></i> Stock : ${escapeHTML(p.stock)}</li>
+</ul>
+<div class="detail-price">${money(p.price)}</div>
+<p><del>${money(p.old)}</del> Économie : ${money(p.old-p.price)} (${reduction(p)}%)</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" onclick="addCart(${p.id})">Ajouter au panier</button>
+<button class="btn btn-green" onclick="orderProduct(${p.id})"><i class="fa-brands fa-whatsapp"></i> Commander WhatsApp</button>
+<a class="btn btn-outline" href="tel:+22555061653"><i class="fa-solid fa-phone"></i> Appeler</a>
+</div>
+</div>
+</div>`;
+go("detail");
+}
+
+function orderProduct(id){
+const p=getProduct(id);
+if(!p)return;
+wa("Bonjour Quincaillerie Awa - Adjamé. Je souhaite commander :\n"+
+p.name+"\nPrix : "+money(p.price)+"\nMarque : "+p.brand+
+"\nUtilisation : "+p.use+"\nMerci de confirmer la disponibilité.");
+}
+
+/* PANIER */
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem("awaCart")||"[]");if(!Array.isArray(cart))cart=[];}catch(e){cart=[];}
+
+function saveCart(){
+localStorage.setItem("awaCart",JSON.stringify(cart));
+updateCount();
+}
+
+function addCart(id){
+const p=getProduct(id);
+if(!p)return;
+const existing=cart.find(item=>item.id===id);
+if(existing)existing.qty++;
+else cart.push({id:id,qty:1});
+saveCart();
+notify("Ajouté au panier !");
+}
+
+function changeQty(id,change){
+const item=cart.find(x=>x.id===id);
+if(!item)return;
+item.qty+=change;
+if(item.qty<=0)cart=cart.filter(x=>x.id!==id);
+saveCart();
+updateCart();
+}
+
+function removeCart(id){
+cart=cart.filter(x=>x.id!==id);
+saveCart();
+updateCart();
+notify("Produit supprimé");
+}
+
+function cartSubtotal(){
+return cart.reduce((sum,item)=>{
+const p=getProduct(item.id);
+return sum+(p?p.price*item.qty:0);
+},0);
+}
+
+function updateCount(){
+const count=cart.reduce((s,item)=>s+item.qty,0);
+document.getElementById("cartCount").textContent=count;
+}
+
+function updateCart(){
+cart=cart.filter(item=>getProduct(item.id));
+document.getElementById("cartItems").innerHTML=cart.length?
+cart.map(item=>{
+const p=getProduct(item.id);
+return `
+<div class="cart-row">
+<img src="${p.image}" alt="${escapeHTML(p.name)}" onerror="this.onerror=null;this.src='${p.fallback}'">
+<div class="cart-row-info">
+<h3>${escapeHTML(p.name)}</h3>
+<p>${money(p.price)} × ${item.qty}</p>
+</div>
+<div class="qty">
+<button onclick="changeQty(${p.id},-1)">−</button>
+<strong>${item.qty}</strong>
+<button onclick="changeQty(${p.id},1)">+</button>
+<button onclick="removeCart(${p.id})" title="Supprimer" style="color:#dc2626"><i class="fa-solid fa-trash"></i></button>
+</div>
+</div>`;
+}).join(""):'<div class="empty"><i class="fa-solid fa-cart-shopping" style="font-size:35px"></i><p>Votre panier est vide.</p><button class="btn btn-primary" onclick="go(\'catalogue\')">Voir le catalogue</button></div>';
+
+const subtotal=cartSubtotal();
+const zone=Number(document.getElementById("deliveryZone")?.value||500);
+const delivery=cart.length===0||subtotal>=50000?0:zone;
+document.getElementById("subtotal").textContent=money(subtotal);
+document.getElementById("deliveryCost").textContent=money(delivery);
+document.getElementById("grandTotal").textContent=money(subtotal+delivery);
+saveCart();
+}
+
+function checkout(){
+if(!cart.length){notify("Votre panier est vide");return;}
+const subtotal=cartSubtotal();
+const zone=Number(document.getElementById("deliveryZone").value);
+const delivery=subtotal>=50000?0:zone;
+const address=document.getElementById("deliveryAddress").value.trim();
+const work=document.getElementById("workDescription").value.trim();
+const zoneText=document.getElementById("deliveryZone").selectedOptions[0].text;
+let message="Bonjour Quincaillerie Awa - Adjamé, je souhaite commander :\n\n";
+cart.forEach(item=>{
+const p=getProduct(item.id);
+message+=p.name+" x "+item.qty+" = "+money(p.price*item.qty)+"\n";
+});
+message+="\nSous-total : "+money(subtotal);
+message+="\nLivraison : "+money(delivery)+" ("+zoneText+")";
+message+="\nTOTAL : "+money(subtotal+delivery);
+message+="\nAdresse : "+(address||"À préciser");
+message+="\nProjet : "+(work||"Non précisé");
+message+="\nMerci de confirmer ma commande.";
+wa(message);
+}
+
+/* DEVIS ET FORMULAIRES */
+function sendQuote(event){
+event.preventDefault();
+const name=document.getElementById("quoteName").value.trim();
+const project=document.getElementById("quoteProject").value.trim();
+const list=document.getElementById("quoteList").value.trim();
+const budget=document.getElementById("quoteBudget").value;
+const message="Bonjour, je veux un devis pour mon projet de bricolage.\n\n"+
+"Nom : "+name+"\nProjet : "+project+"\nMa liste : "+list+
+"\nBudget : "+(budget?money(Number(budget)):"Non précisé")+
+"\nMerci de me répondre avec la liste complète et le prix total.";
+wa(message);
+}
+
+function guideOrder(list){
+wa("Bonjour Quincaillerie Awa, je souhaite commander ou demander un devis pour ce guide de bricolage.\nListe : "+list);
+}
+
+function sendReview(event){
+event.preventDefault();
+const message="Bonjour, je souhaite laisser un avis.\nNom : "+
+document.getElementById("reviewName").value+
+"\nQuartier : "+document.getElementById("reviewArea").value+
+"\nNote : "+document.getElementById("reviewRating").value+
+"\nAvis : "+document.getElementById("reviewText").value;
+wa(message);
+}
+
+function sendContact(event){
+event.preventDefault();
+wa("Bonjour Quincaillerie Awa.\nNom : "+
+document.getElementById("contactName").value+
+"\nMessage : "+document.getElementById("contactMessage").value);
+}
+
+/* CALCULATEUR PEINTURE */
+function calculatePaint(){
+const area=Number(document.getElementById("paintArea").value);
+const result=document.getElementById("paintResult");
+if(!area||area<=0){result.textContent="Entrez une surface valide.";return;}
+const litres=area/8;
+result.textContent="Quantité théorique : "+litres.toLocaleString("fr-FR",{maximumFractionDigits:2})+
+" litre(s). Prévoir une marge et vérifier le rendement sur le pot.";
+}
+
+/* THEME */
+function toggleTheme(){
+document.body.classList.toggle("dark");
+const dark=document.body.classList.contains("dark");
+localStorage.setItem("awaTheme",dark?"dark":"light");
+document.getElementById("themeIcon").className=dark?"fa-solid fa-sun":"fa-solid fa-moon";
+}
+
+/* INITIALISATION */
+function init(){
+const savedTheme=localStorage.getItem("awaTheme");
+if(savedTheme==="dark"){
+document.body.classList.add("dark");
+document.getElementById("themeIcon").className="fa-solid fa-sun";
+}
+const brands=[...new Set(products.map(p=>p.brand))].sort();
+document.getElementById("brandFilter").innerHTML=
+'<option value="">Toutes les marques</option>'+
+brands.map(b=>'<option value="'+escapeHTML(b)+'">'+escapeHTML(b)+'</option>').join("");
+
+document.getElementById("featuredProducts").innerHTML=
+[products[0],products[2],products[4]].map(productCard).join("");
+
+renderCatalog();
+renderCategory("toolProducts","Outillage");
+renderCategory("paintProducts","Peinture & Décoration");
+
+document.getElementById("plumbingProducts").innerHTML=
+products.filter(p=>[
+"Plomberie & Salle de Bain",
+"Électricité & Éclairage"
+].includes(p.category)).map(productCard).join("");
+
+updateCount();
+updateCart();
+}
+init();
+</script>
+</body>
+</html>
